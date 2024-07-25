@@ -6,8 +6,7 @@ import Form from "react-bootstrap/Form";
 import { useStableDiffusion } from "../../hooks/useGenerateImage";
 
 const PromptInput: React.FC = () => {
-  const { prompt, setPrompt, handleSubmit, handleReset, loading } =
-    useStableDiffusion();
+  const { prompt, setPrompt, handleSubmit, loading } = useStableDiffusion();
   const formRef = useRef<HTMLFormElement>(null);
 
   const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -34,15 +33,6 @@ const PromptInput: React.FC = () => {
           disabled={loading}
         >
           Generate Image
-        </Button>
-        <Button
-          type="button"
-          disabled={loading}
-          variant="warning"
-          onClick={handleReset}
-          className="btn w-100"
-        >
-          Reset
         </Button>
       </ButtonGroup>
     </Form>
