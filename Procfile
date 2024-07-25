@@ -1,1 +1,1 @@
-web: pnpm setup && pnpm install -g serve && serve -s dist
+web: npx serve -s dist
